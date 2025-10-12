@@ -157,7 +157,7 @@ const Index = () => {
         </div>
 
         {/* Recent Section */}
-        <section id="recent" className="mt-24">
+        <section id="recent" className="mt-24" data-aos="fade-up">
     <div className="flex items-center justify-between">
       <h2 className="text-3xl font-bold mb-8">Recently updated</h2>
       <div className="mb-8">
@@ -206,13 +206,10 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Tags Section */}
-        <section className="mt-16">
-          <h3 className="text-xl font-semibold mb-4 text-muted-foreground">Tags</h3>
-        </section>
+        
       </main>
 
-      {/* Back to Top */}
+      {/* Back to Top
       <div className="fixed bottom-8 right-8">
         <a 
           href="#" 
@@ -221,7 +218,7 @@ const Index = () => {
         >
           <ArrowUp className="w-4 h-4" />
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };

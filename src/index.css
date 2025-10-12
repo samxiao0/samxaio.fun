@@ -1,3 +1,15 @@
+body.black {
+  background-color: #000 !important;
+  color: #fff;
+  transition: background-color 0.4s cubic-bezier(0.4,0,0.2,1), color 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+body.white {
+  background-color: #fff !important;
+  color: #222;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -88,7 +100,20 @@ All colors MUST be HSL.
   }
 
   h1, h2, h3, h4, h5, h6 {
-    line-height: 1.3;
+    font-family: 'Montserrat', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    color: inherit;
+    transition: color 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  body.black h1, body.black h2, body.black h3, body.black h4, body.black h5, body.black h6 {
+    color: #fff;
+  }
+
+  body.white h1, body.white h2, body.white h3, body.white h4, body.white h5, body.white h6 {
+    color: #222;
   }
 }
 
@@ -96,7 +121,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* stronger overlay for better contrast against background photo */
-    --bg-overlay: rgba(0,0,0,0.3);
+    --bg-overlay: rgb(0, 0, 0);
   }
 
   html, body, #root {
@@ -104,23 +129,15 @@ All colors MUST be HSL.
   }
 
   body {
-    background-image: url('/channels4_profile-1024x576.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-color: hsl(var(--background));
+    background-color: #000 !important;
+    color: #fff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.4s cubic-bezier(0.4,0,0.2,1), color 0.4s cubic-bezier(0.4,0,0.2,1);
   }
 
-  /* subtle overlay to improve text readability */
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: var(--bg-overlay);
-    pointer-events: none;
-    z-index: 0;
-  }
+  /* removed overlay layer */
 
   /* Ensure app content renders above the overlay */
   #root {
@@ -128,42 +145,8 @@ All colors MUST be HSL.
     z-index: 1;
   }
 
-  /* Make the main content area a frosted, semi-opaque panel for legibility */
-  #main-content {
-    position: relative;
-    z-index: 2; /* above overlay and root */
-    background-color: rgba(0, 0, 0, 0.45);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    border-radius: 0.75rem;
-    /* add a subtle border to separate from background */
-    border: 1px solid rgba(255,255,255,0.04);
-    /* responsive horizontal padding and sensible max width */
-    padding-inline: 1rem; /* mobile / small screens */
-
-    /* medium screens: more breathing room */
-    @media (min-width: 768px) {
-      padding-inline: 2rem;
-    }
-
-    /* large screens: wider padding and constrain content width */
-    @media (min-width: 1024px) {
-      padding-inline: 3rem;
-      max-width: 1100px; /* prevents the frosted panel from spanning too wide */
-      width: calc(100% - 6rem); /* ensure some gutters remain on very wide screens */
-    }
-    /* vertical padding for content and a visible gap below the panel */
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    /* Use safe-area inset on devices that support it */
-    padding-bottom: calc(1rem + env(safe-area-inset-bottom));
-  margin-bottom: 2.5rem; /* visible gap below the panel */
-    /* visible gap from the top (space below the navbar). Use safe-area if available. */
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 5rem;
-    margin-top: calc(5rem + env(safe-area-inset-top));
-  }
+  /* Make the main content area a simple panel for legibility */
+  /* Removed #main-content container styles. Content will render directly on the page. */
 
   /* Increase contrast of paragraph text inside the content panel */
   #main-content .text-left p,
@@ -174,5 +157,64 @@ All colors MUST be HSL.
   /* Slightly lighten nav links for visibility */
   nav a {
     color: rgba(255,255,255,0.9);
+  }
+
+  body.white nav {
+    background: #fff !important;
+    color: #222 !important;
+  }
+  body.black nav {
+    background: #000 !important;
+    color: #fff !important;
+  }
+
+  /* White theme text colors - more specific selectors */
+  body.white p,
+  body.white span:not([class*="bg-"]):not([class*="border-"]),
+  body.white a,
+  body.white li {
+    color: #222 !important;
+  }
+  
+  /* White theme card styling */
+  body.white [class*="bg-card"],
+  body.white [class*="border-border"] {
+    background-color: #fff !important;
+    border-color: #e5e5e5 !important;
+  }
+  
+  body.white [class*="bg-muted"] {
+    background-color: #f5f5f5 !important;
+  }
+  
+  body.white [class*="text-muted-foreground"] {
+    color: #666 !important;
+  }
+  
+  body.white [class*="bg-primary"] {
+    background-color: hsl(16 100% 55%) !important;
+    color: #fff !important;
+  }
+  
+  body.white [class*="text-primary"] {
+    color: hsl(16 100% 55%) !important;
+  }
+  
+  body.white [class*="border-primary"] {
+    border-color: hsl(16 100% 55%) !important;
+  }
+  
+  /* Fix button text colors */
+  body.white button,
+  body.white button span,
+  body.white a button,
+  body.white [class*="bg-primary"] span,
+  body.white [class*="bg-primary"] svg {
+    color: #fff !important;
+  }
+  
+  body.white [class*="border-border"] button span,
+  body.white [class*="border-border"] svg {
+    color: #222 !important;
   }
 }

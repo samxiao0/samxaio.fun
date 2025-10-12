@@ -3,6 +3,7 @@ import { Github, ArrowLeft, ArrowUp } from "lucide-react";
 import { useEffect, useState } from "react";
 import Nav from "@/components/Nav";
 import { Link } from "react-router-dom";
+import { ProjectCard } from "@/components/ProjectCard";
 
 const Projects = () => {
   type RepoItem = {
@@ -11,6 +12,9 @@ const Projects = () => {
     html_url: string;
     description: string | null;
     updated_at: string;
+    language?: string | null;
+    stargazers_count?: number;
+    forks_count?: number;
   };
 
 const GITHUB_USERNAME = "samxiao0"; // update if needed
@@ -30,7 +34,33 @@ const GITHUB_USERNAME = "samxiao0"; // update if needed
 
   ];
 
-  
+  // Featured projects data
+  const projects = [
+    {
+      title: "AI Task Manager",
+      description: "Smart task management app with AI-powered priority suggestions and natural language processing.",
+      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
+      tags: ["TypeScript", "OpenAI", "PostgreSQL", "Docker"],
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com/samxiao0/ai-task-manager",
+    },
+    {
+      title: "Weather Dashboard",
+      description: "Real-time weather visualization with interactive maps, forecasts, and historical data analysis.",
+      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80",
+      tags: ["React", "D3.js", "API", "Tailwind"],
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com/samxiao0/weather-dashboard",
+    },
+    {
+      title: "Portfolio Website",
+      description: "Modern portfolio website with dark mode, animations, and responsive design.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+      tags: ["React", "Vite", "Tailwind", "TypeScript"],
+      liveUrl: "https://samxaio.fun",
+      githubUrl: "https://github.com/samxiao0/samxaio.fun",
+    },
+  ];
 
   const [repos, setRepos] = useState<RepoItem[]>([]);
   const [loading, setLoading] = useState(true);
@@ -107,6 +137,9 @@ const GITHUB_USERNAME = "samxiao0"; // update if needed
               html_url: found.html_url,
               description: found.description,
               updated_at: found.updated_at,
+              language: found.language,
+              stargazers_count: found.stargazers_count,
+              forks_count: found.forks_count,
             } as RepoItem);
           } else {
             failed.push(`${name} (not found)`);
@@ -122,6 +155,9 @@ const GITHUB_USERNAME = "samxiao0"; // update if needed
             html_url: r.html_url,
             description: r.description,
             updated_at: r.updated_at,
+            language: r.language,
+            stargazers_count: r.stargazers_count,
+            forks_count: r.forks_count,
           } as RepoItem);
         }
       }
@@ -149,7 +185,7 @@ const GITHUB_USERNAME = "samxiao0"; // update if needed
     <div>
       <Nav />
       {/* Back to Top */}
-      <div className="fixed bottom-8 right-8">
+      {/* <div className="fixed bottom-8 right-8">
         <a
           href="#"
           className="flex items-center justify-center w-10 h-10 rounded-full bg-secondary hover:bg-muted transition-colors"
@@ -157,10 +193,28 @@ const GITHUB_USERNAME = "samxiao0"; // update if needed
         >
           <ArrowUp className="w-4 h-4" />
         </a>
-      </div>
-      <main id="main-content" className="max-w-3xl mx-auto px-6 pt-32 pb-20">
+      </div> */}
+      <main id="main-content" className="max-w-6xl mx-auto px-6 pt-32 pb-20">
+        {/* Featured Projects Section */}
+        <section className="mb-20" data-aos="fade-up">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Here are some of my highlighted projects that showcase my skills and experience
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project) => (
+              <ProjectCard key={project.title} {...project} />
+            ))}
+          </div>
+        </section>
+
+        {/* GitHub Repositories Section */}
+        <section data-aos="fade-up">
         <div className="flex items-center justify-between mb-8">
-          <h1 className="text-3xl font-bold">Projects</h1>
+          <h2 className="text-3xl font-bold">All GitHub Repositories</h2>
           <div className="flex items-center gap-3">
             <Button size="sm" onClick={() => { fetchAll(); }}>
               Refresh
@@ -186,21 +240,69 @@ const GITHUB_USERNAME = "samxiao0"; // update if needed
           ) : repos.length === 0 ? (
             <p className="text-muted-foreground">No projects configured. Add repo names to DESIRED_REPOS in src/pages/Projects.tsx</p>
           ) : (
-            repos.map((repo) => (
-              <div key={repo.id} className="group">
-                <a
-                  href={repo.html_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-lg font-medium group-hover:text-primary transition-colors"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {repos.map((repo) => (
+                <div 
+                  key={repo.id} 
+                  className="group relative border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 bg-card/50 backdrop-blur-sm"
                 >
-                  {repo.name}
-                </a>
-                {repo.description && <p className="text-sm text-muted-foreground">{repo.description}</p>}
-              </div>
-            ))
+                  {/* Repo Name with Icon */}
+                  <a
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 mb-3 group/link"
+                  >
+                    <Github className="w-5 h-5 text-muted-foreground group-hover/link:text-primary transition-colors" />
+                    <h3 className="text-xl font-bold group-hover/link:text-primary transition-colors">
+                      {repo.name}
+                    </h3>
+                  </a>
+                  
+                  {/* Description */}
+                  {repo.description && (
+                    <p className="text-sm text-muted-foreground mb-4 line-clamp-2 leading-relaxed">
+                      {repo.description}
+                    </p>
+                  )}
+                  
+                  {/* Footer - Stats & Date */}
+                  <div className="flex items-center justify-between pt-4 mt-auto border-t border-border/50">
+                    {/* Left side - Language & Stats */}
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                      {repo.language && (
+                        <span className="flex items-center gap-1.5 font-medium">
+                          <span className="w-2 h-2 rounded-full bg-primary"></span>
+                          {repo.language}
+                        </span>
+                      )}
+                      {repo.stargazers_count !== undefined && repo.stargazers_count > 0 && (
+                        <span className="flex items-center gap-1">
+                          ⭐ {repo.stargazers_count}
+                        </span>
+                      )}
+                      {repo.forks_count !== undefined && repo.forks_count > 0 && (
+                        <span className="flex items-center gap-1">
+                          🍴 {repo.forks_count}
+                        </span>
+                      )}
+                    </div>
+                    
+                    {/* Right side - Updated date */}
+                    <time className="text-xs text-muted-foreground">
+                      {new Date(repo.updated_at).toLocaleDateString('en-US', { 
+                        month: 'short', 
+                        day: 'numeric',
+                        year: 'numeric'
+                      })}
+                    </time>
+                  </div>
+                </div>
+              ))}
+            </div>
           )}
         </div>
+        </section>
   </main>
   
     </div>

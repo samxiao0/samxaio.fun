@@ -1,9 +1,30 @@
 import { Github, Linkedin, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
+  const [theme, setTheme] = useState<'black' | 'white'>(document.body.classList.contains('white') ? 'white' : 'black');
+
+  // Toggle theme between black and white using CSS classes
+  const toggleTheme = () => {
+    setTheme((prev) => {
+      const next = prev === 'black' ? 'white' : 'black';
+      document.body.classList.remove('black', 'white');
+      document.body.classList.add(next);
+      return next;
+    });
+  };
+
+  // Initialize AOS on mount
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
 
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-sm border-b border-border z-50">
@@ -15,6 +36,36 @@ const Nav = () => {
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-5 text-sm text-muted-foreground">
+            <button
+              aria-label={theme === 'black' ? 'Switch to white mode' : 'Switch to black mode'}
+              onClick={toggleTheme}
+              className="p-2 rounded-full bg-transparent border border-border hover:bg-muted transition-colors mr-2"
+              style={{ transition: 'background 0.3s, color 0.3s' }}
+            >
+              {theme === 'black'
+                ? (
+                  // Sun outline SVG
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="5" stroke="#FFD600" strokeWidth="2" fill="none" />
+                    <g stroke="#FFD600" strokeWidth="2">
+                      <line x1="12" y1="2" x2="12" y2="5" />
+                      <line x1="12" y1="19" x2="12" y2="22" />
+                      <line x1="2" y1="12" x2="5" y2="12" />
+                      <line x1="19" y1="12" x2="22" y2="12" />
+                      <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" />
+                      <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" />
+                      <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" />
+                      <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" />
+                    </g>
+                  </svg>
+                )
+                : (
+                  // Moon outline SVG
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" stroke="#222" strokeWidth="2" fill="none" />
+                  </svg>
+                )}
+            </button>
             <Link to="/" className="hover:text-primary transition-colors">Home</Link>
             <Link to="/about" className="hover:text-primary transition-colors">About</Link>
             <Link to="/projects" className="hover:text-primary transition-colors">Projects</Link>
