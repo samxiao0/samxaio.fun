@@ -40,6 +40,36 @@ All colors MUST be HSL.
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  .dark {
+    --background: 220 18% 7%;
+    --foreground: 210 15% 90%;
+
+    --card: 220 16% 10%;
+    --card-foreground: 210 15% 90%;
+
+    --popover: 220 16% 10%;
+    --popover-foreground: 210 15% 90%;
+
+    --primary: 16 100% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 15%;
+    --secondary-foreground: 210 15% 90%;
+
+    --muted: 220 14% 20%;
+    --muted-foreground: 210 10% 60%;
+
+    --accent: 16 100% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 14% 18%;
+    --input: 220 14% 18%;
+    --ring: 16 100% 55%;
+  }
 }
 
 @layer base {

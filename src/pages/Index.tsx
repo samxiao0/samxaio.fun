@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Moon, ArrowUp } from "lucide-react";
+import { Github, Linkedin, Mail, Moon, Sun, ArrowUp } from "lucide-react";
+import { useTheme } from "@/components/ThemeProvider";
 
 const Index = () => {
+  const { theme, setTheme } = useTheme();
+  
   const recentPosts = [
     { title: "Building Scalable Systems", date: "2024-01-15" },
     { title: "Lessons from Technical Leadership", date: "2024-01-08" },
@@ -25,10 +28,15 @@ const Index = () => {
                 Blog
               </a>
               <button 
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="Toggle theme"
               >
-                <Moon className="w-4 h-4" />
+                {theme === "dark" ? (
+                  <Sun className="w-4 h-4" />
+                ) : (
+                  <Moon className="w-4 h-4" />
+                )}
               </button>
             </div>
           </div>
