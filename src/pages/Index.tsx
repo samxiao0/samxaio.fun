@@ -92,24 +92,24 @@ const Index = () => {
       <Nav />
 
       {/* Main Content */}
-      <main id="main-content" className="max-w-3xl mx-auto px-6 pt-32 pb-20">
+      <main id="main-content" className="max-w-2xl mx-auto px-6 pt-32 pb-20">
         {/* Profile Section */}
         <div className="text-center mb-16">
-          <div className="mb-8">
+          <div className="mb-6">
             <img 
               src="/channels4_profile-1024x576.jpg" 
               alt="Profile"
-              className="w-40 h-40 rounded-full mx-auto object-cover border-4 border-border"
+              className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-white/10"
             />
           </div>
           
-          <h1 className="text-5xl font-bold mb-3">SYED MOHAMMAD SAMEER</h1>
-          <p className="text-xl text-muted-foreground mb-6">Student</p>
+          <h1 className="text-4xl font-bold mb-2">SYED MOHAMMAD SAMEER</h1>
+          <p className="text-lg text-muted-foreground mb-6">Student</p>
           
-          <div className="flex justify-center gap-4 mb-8">
+          <div className="flex justify-center gap-3 mb-8">
             <a 
               href="mailto:syedsame2244@gmail.com" 
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="p-2 text-muted-foreground hover:text-foreground transition-colors"
               aria-label="Email"
             >
               <Mail className="w-5 h-5" />
@@ -118,7 +118,7 @@ const Index = () => {
               href="https://github.com/samxiao0" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="p-2 text-muted-foreground hover:text-foreground transition-colors"
               aria-label="GitHub"
             >
               <Github className="w-5 h-5" />
@@ -127,29 +127,29 @@ const Index = () => {
               href="https://linkedin.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="p-2 text-muted-foreground hover:text-foreground transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-5 h-5" />
             </a>
           </div>
 
-          <div className="text-left max-w-2xl mx-auto space-y-4">
-            <p className="text-lg">Welcome 👋,</p>
+          <div className="text-center max-w-xl mx-auto space-y-4">
+            <p className="text-base">Welcome 👋</p>
             
-            <p className="text-base leading-relaxed text-foreground/90">
-             I’m SAMXIAO, a passionate 3rd-year B.Tech CSE (AI & ML) student driven by curiosity and innovation. I love building things that blend logic with creativity — from intelligent software to sleek, functional designs. With a mindset rooted in questioning everything and learning constantly, I strive to master the art of programming and artificial intelligence. Whether it’s coding, designing, or exploring new tech trends, I’m all about turning ideas into impact. My journey is just beginning, but every line of code I write brings me closer to shaping the future I envision.
+            <p className="text-base leading-relaxed text-foreground/80">
+I’m SAMXIAO, a passionate 3rd-year B.Tech CSE (AI & ML) student driven by curiosity and innovation. I love building things that blend logic with creativity — from intelligent software to sleek, functional designs. With a mindset rooted in questioning everything and learning constantly, I strive to master the art of programming and artificial intelligence. Whether it’s coding, designing, or exploring new tech trends, I’m all about turning ideas into impact. My journey is just beginning, but every line of code I write brings me closer to shaping the future I envision.
+
             </p>
-            
-           
-            
-            <p className="text-lg">Thanks for visiting!</p>
+
+            <p className="text-base">Thanks for visiting!</p>
           </div>
 
           <div className="mt-8">
             <Button 
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
+              className="bg-primary hover:bg-primary/90 text-white font-medium px-8"
+              onClick={() => window.location.href = '/about'}
             >
               Learn more
             </Button>

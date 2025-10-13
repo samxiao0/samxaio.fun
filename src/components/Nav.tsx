@@ -27,7 +27,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-sm border-b border-border z-50">
+    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-sm z-50">
       <div className="max-w-6xl mx-auto px-6 py-3">
         <div className="flex justify-between items-center">
           <Link to="/" className="text-lg font-semibold hover:text-primary transition-colors">
@@ -39,15 +39,15 @@ const Nav = () => {
             <button
               aria-label={theme === 'black' ? 'Switch to white mode' : 'Switch to black mode'}
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-transparent border border-border hover:bg-muted transition-colors mr-2"
-              style={{ transition: 'background 0.3s, color 0.3s' }}
+              className="p-2 rounded-full hover:bg-white/5 transition-colors"
+              style={{ transition: 'background 0.3s' }}
             >
               {theme === 'black'
                 ? (
                   // Sun outline SVG
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="5" stroke="#FFD600" strokeWidth="2" fill="none" />
-                    <g stroke="#FFD600" strokeWidth="2">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2" fill="none" />
+                    <g stroke="currentColor" strokeWidth="2">
                       <line x1="12" y1="2" x2="12" y2="5" />
                       <line x1="12" y1="19" x2="12" y2="22" />
                       <line x1="2" y1="12" x2="5" y2="12" />
@@ -61,8 +61,8 @@ const Nav = () => {
                 )
                 : (
                   // Moon outline SVG
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" stroke="#222" strokeWidth="2" fill="none" />
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" stroke="currentColor" strokeWidth="2" fill="none" />
                   </svg>
                 )}
             </button>
@@ -70,23 +70,61 @@ const Nav = () => {
             <Link to="/about" className="hover:text-primary transition-colors">About</Link>
             <Link to="/projects" className="hover:text-primary transition-colors">Projects</Link>
             <Link to="/resume" className="hover:text-primary transition-colors">Resume</Link>
-            <a href="https://github.com/samxiao0" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors" aria-label="GitHub">
+            {/* <a href="https://github.com/samxiao0" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors" aria-label="GitHub">
               <Github className="w-4 h-4" />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors" aria-label="LinkedIn">
               <Linkedin className="w-4 h-4" />
-            </a>
+            </a> */}
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile menu button and theme toggle */}
+          <div className="md:hidden flex items-center gap-2">
+            <button
+              aria-label={theme === 'black' ? 'Switch to white mode' : 'Switch to black mode'}
+              onClick={toggleTheme}
+              className="p-2 rounded-full hover:bg-white/5 transition-colors"
+              style={{ transition: 'background 0.3s' }}
+            >
+              {theme === 'black'
+                ? (
+                  // Sun outline SVG
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2" fill="none" />
+                    <g stroke="currentColor" strokeWidth="2">
+                      <line x1="12" y1="2" x2="12" y2="5" />
+                      <line x1="12" y1="19" x2="12" y2="22" />
+                      <line x1="2" y1="12" x2="5" y2="12" />
+                      <line x1="19" y1="12" x2="22" y2="12" />
+                      <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" />
+                      <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" />
+                      <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" />
+                      <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" />
+                    </g>
+                  </svg>
+                )
+                : (
+                  // Moon outline SVG
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" stroke="#000000ff" strokeWidth="2" fill="none" />
+                  </svg>
+                )}
+            </button>
             <button
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
               onClick={() => setOpen((v) => !v)}
-              className="p-2 rounded-md bg-transparent hover:bg-muted transition-colors"
+              className="p-2 rounded-md hover:bg-white/5 transition-colors"
             >
-              {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {open ? (
+                <X className="w-5 h-5" strokeWidth={2} />
+              ) : (
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
+              )}
             </button>
           </div>
         </div>
@@ -109,14 +147,14 @@ const Nav = () => {
               <Link to="/projects" onClick={() => setOpen(false)} className="text-sm hover:text-primary transition-colors">Projects</Link>
               <Link to="/resume" onClick={() => setOpen(false)} className="text-sm hover:text-primary transition-colors">Resume</Link>
 
-              <div className="flex items-center gap-4 pt-2">
+              {/* <div className="flex items-center gap-4 pt-2 border-t border-border mt-2 pt-3">
                 <a href="https://github.com/samxiao0" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="GitHub">
                   <Github className="w-4 h-4" />
                 </a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="LinkedIn">
                   <Linkedin className="w-4 h-4" />
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

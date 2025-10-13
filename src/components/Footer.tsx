@@ -1,7 +1,7 @@
 import { Github, Linkedin, Menu, X } from "lucide-react";
 const Footer = () => {
   return (
-    <footer className="w-full border-t border-border bg-transparent">
+    <footer className="w-full bg-transparent">
       <div className="max-w-3xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="text-sm text-muted-foreground">
           © {new Date().getFullYear()} <span className="font-medium">SYED MOHAMMAD SAMEER</span>
