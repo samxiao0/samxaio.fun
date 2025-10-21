@@ -82,11 +82,11 @@ const BackgroundMusic = ({ src, title = "Background Music" }: BackgroundMusicPro
 
       {/* Music control button - fixed position */}
       <div className="fixed bottom-6 right-6 z-50 music-controls">
-        <div className="bg-card border rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow">
+        <div className="bg-card/95 backdrop-blur-sm border border-border/50 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-200">
           <div className="flex items-center gap-2 music-controls">
             <button
               onClick={togglePlay}
-              className="p-2 rounded-full hover:bg-accent transition-colors"
+              className="p-2 rounded-full hover:bg-accent/80 transition-colors text-foreground"
               title={isPlaying ? "Pause music" : "Play music"}
             >
               {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
@@ -94,7 +94,7 @@ const BackgroundMusic = ({ src, title = "Background Music" }: BackgroundMusicPro
 
             <button
               onClick={toggleMute}
-              className="p-2 rounded-full hover:bg-accent transition-colors"
+              className="p-2 rounded-full hover:bg-accent/80 transition-colors text-foreground"
               title={isMuted ? "Unmute" : "Mute"}
             >
               {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
