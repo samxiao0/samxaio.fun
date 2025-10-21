@@ -72,9 +72,4 @@ This project is built with:
 
 
 
-## Can I connect a custom domain to my project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
