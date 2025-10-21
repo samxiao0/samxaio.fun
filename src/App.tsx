@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Resume from "./pages/Resume";
 import NotFound from "./pages/NotFound";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <ScrollToTop />
             <div className="flex-grow">
               <Routes>
                 <Route path="/" element={<Index />} />
