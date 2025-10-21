@@ -11,6 +11,7 @@ import Resume from "./pages/Resume";
 import NotFound from "./pages/NotFound";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import BackgroundMusic from "@/components/BackgroundMusic";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,10 @@ const App = () => (
         <div className="min-h-screen flex flex-col">
           <Toaster />
           <Sonner />
+          <BackgroundMusic
+            src="/eed86689c9723b7dfe0c6d1c034f6d5eed0c0091.mp3"
+            title="Background Music"
+          />
           <BrowserRouter>
             <ScrollToTop />
             <div className="flex-grow">
