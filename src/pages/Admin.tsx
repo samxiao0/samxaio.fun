@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,6 +11,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Lock, CheckCircle, Film, Music, Gamepad2, Link, BookOpen, Plus, FileText, Edit, Trash2, ExternalLink } from "lucide-react";
 
 const Admin = () => {
+  const navigate = useNavigate();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -52,7 +54,7 @@ const Admin = () => {
     setError("");
 
     // Simple password check - in a real app, this would be more secure
-    const correctPassword = "admin123"; // You should change this to a secure password
+    const correctPassword = "Asdf-/:;1234"; // You should change this to a secure password
 
     if (password === correctPassword) {
       setIsAuthenticated(true);
@@ -68,6 +70,7 @@ const Admin = () => {
     setIsAuthenticated(false);
     localStorage.removeItem("adminAuthenticated");
     setPassword("");
+    navigate("/");
   };
 
   // Helper functions to manage items
@@ -597,7 +600,7 @@ const Admin = () => {
                                         alt={preview.title}
                                         className="w-16 h-16 object-cover rounded"
                                         onError={(e) => {
-                                          e.target.style.display = 'none';
+                                          (e.target as HTMLImageElement).style.display = 'none';
                                         }}
                                       />
                                     )}
@@ -718,7 +721,7 @@ const Admin = () => {
                                         alt={preview.title}
                                         className="w-16 h-16 object-cover rounded"
                                         onError={(e) => {
-                                          e.target.style.display = 'none';
+                                          (e.target as HTMLImageElement).style.display = 'none';
                                         }}
                                       />
                                     )}
