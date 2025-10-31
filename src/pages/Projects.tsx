@@ -23,11 +23,11 @@ const GITHUB_USERNAME = "samxiao0"; // update if needed
   const DESIRED_REPOS: string[] = ["SEM22",
     "samxaio.fun",
     "final-hackathon",
-    "PRIVATE-CHAT",
+    
     "AIMLPHOTOS",
     "student-website",
     "college2025",
-    "clg",
+   
     "my-resume2.0",
     "ThinkBotz112",
     "thinkbotz"
