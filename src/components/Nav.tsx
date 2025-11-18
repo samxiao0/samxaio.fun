@@ -146,7 +146,6 @@ const Nav = () => {
               <Link to="/about" onClick={() => setOpen(false)} className="text-sm hover:text-primary transition-colors">About</Link>
               <Link to="/projects" onClick={() => setOpen(false)} className="text-sm hover:text-primary transition-colors">Projects</Link>
               <Link to="/resume" onClick={() => setOpen(false)} className="text-sm hover:text-primary transition-colors">Resume</Link>
-              <Link to="/admin" onClick={() => setOpen(false)} className="text-sm hover:text-primary transition-colors">Admin</Link>
 
               {/* <div className="flex items-center gap-4 pt-2 border-t border-border mt-2 pt-3">
                 <a href="https://github.com/samxiao0" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="GitHub">
