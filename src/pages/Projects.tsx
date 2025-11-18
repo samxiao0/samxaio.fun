@@ -18,7 +18,7 @@ const Projects = () => {
   };
 
 const GITHUB_USERNAME = "samxiao0"; // update if needed
-  const MAX_REPOS = 5;
+  const MAX_REPOS = 1000;
   // Keep DESIRED_REPOS empty here — Projects page will use its own DESIRED_REPOS list.
   const DESIRED_REPOS: string[] = [
 
