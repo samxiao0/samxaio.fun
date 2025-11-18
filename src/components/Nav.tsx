@@ -70,7 +70,6 @@ const Nav = () => {
             <Link to="/about" className="hover:text-primary transition-colors">About</Link>
             <Link to="/projects" className="hover:text-primary transition-colors">Projects</Link>
             <Link to="/resume" className="hover:text-primary transition-colors">Resume</Link>
-            <Link to="/admin" className="hover:text-primary transition-colors">Admin</Link>
             {/* <a href="https://github.com/samxiao0" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors" aria-label="GitHub">
               <Github className="w-4 h-4" />
             </a>
