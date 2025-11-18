@@ -26,8 +26,7 @@ const GITHUB_USERNAME = "samxiao0"; // update if needed
     
     "AIMLPHOTOS",
     "student-website",
-    "college2025",
-   
+
     "my-resume2.0",
     "ThinkBotz112",
     "thinkbotz"
