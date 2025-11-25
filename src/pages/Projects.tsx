@@ -24,33 +24,33 @@ const GITHUB_USERNAME = "samxiao0"; // update if needed
 
   ];
 
-   Featured projects data
-   const projects = [
-     {
-       title: "AI Task Manager",
-       description: "Smart task management app with AI-powered priority suggestions and natural language processing.",
-       image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
-       tags: ["TypeScript", "OpenAI", "PostgreSQL", "Docker"],
-       liveUrl: "https://example.com",
-       githubUrl: "https://github.com/samxiao0/ai-task-manager",
-     },
-     {
-       title: "Weather Dashboard",
-       description: "Real-time weather visualization with interactive maps, forecasts, and historical data analysis.",
-       image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80",
-       tags: ["React", "D3.js", "API", "Tailwind"],
-       liveUrl: "https://example.com",
-       githubUrl: "https://github.com/samxiao0/weather-dashboard",
-     },
-     {
-       title: "Portfolio Website",
-       description: "Modern portfolio website with dark mode, animations, and responsive design.",
-       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-       tags: ["React", "Vite", "Tailwind", "TypeScript"],
-       liveUrl: "https://samxaio.fun",
-       githubUrl: "https://github.com/samxiao0/samxaio.fun",
-     },
-   ];
+  // Featured projects data
+  const projects = [
+    {
+      title: "AI Task Manager",
+      description: "Smart task management app with AI-powered priority suggestions and natural language processing.",
+      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
+      tags: ["TypeScript", "OpenAI", "PostgreSQL", "Docker"],
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com/samxiao0/ai-task-manager",
+    },
+    {
+      title: "Weather Dashboard",
+      description: "Real-time weather visualization with interactive maps, forecasts, and historical data analysis.",
+      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80",
+      tags: ["React", "D3.js", "API", "Tailwind"],
+      liveUrl: "https://example.com",
+      githubUrl: "https://github.com/samxiao0/weather-dashboard",
+    },
+    {
+      title: "Portfolio Website",
+      description: "Modern portfolio website with dark mode, animations, and responsive design.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+      tags: ["React", "Vite", "Tailwind", "TypeScript"],
+      liveUrl: "https://samxaio.fun",
+      githubUrl: "https://github.com/samxiao0/samxaio.fun",
+    },
+  ];
 
   const [repos, setRepos] = useState<RepoItem[]>([]);
   const [loading, setLoading] = useState(true);
@@ -187,19 +187,19 @@ const GITHUB_USERNAME = "samxiao0"; // update if needed
       <main id="main-content" className="max-w-6xl mx-auto px-6 pt-32 pb-20">
         {/* Featured Projects Section */}
         <section className="mb-20" data-aos="fade-up">
-          {/* <div className="text-center mb-12">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Here are some of my highlighted projects that showcase my skills and experience
             </p>
-          </div> */}
+          </div>
           
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
               <ProjectCard key={project.title} {...project} />
             ))}
-          </div> */}
-        </section> 
+          </div>
+        </section>
 
         {/* GitHub Repositories Section */}
         <section data-aos="fade-up">
