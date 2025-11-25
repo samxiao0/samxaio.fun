@@ -30,7 +30,7 @@ const GITHUB_USERNAME = "samxiao0"; // update if needed
       title: "Student Attendance Manager",
       description: "This application lets you enter your attendance and manage your stats",
       image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
-      tags: ["TypeScript", "React", "local_storage", "oofline"],
+      tags: ["TypeScript", "React", "local_storage", "ofline"],
       liveUrl: "https://bunkmaar.tech",
       githubUrl: "https://github.com/samxiao0/bunkmaar",
     },
