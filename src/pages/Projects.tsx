@@ -47,7 +47,7 @@ const GITHUB_USERNAME = "samxiao0"; // update if needed
       description: "Modern portfolio website with dark mode, animations, and responsive design.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
       tags: ["React", "Vite", "Tailwind", "TypeScript"],
-      liveUrl: "https://samxaio.fun",
+      liveUrl: "https://samxiao.fun",
       githubUrl: "https://github.com/samxiao0/samxaio.fun",
     },
   ];
