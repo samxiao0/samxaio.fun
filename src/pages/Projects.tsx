@@ -27,12 +27,12 @@ const GITHUB_USERNAME = "samxiao0"; // update if needed
   // Featured projects data
   const projects = [
     {
-      title: "AI Task Manager",
-      description: "Smart task management app with AI-powered priority suggestions and natural language processing.",
+      title: "Student Attendance Manager",
+      description: "This application lets you enter your attendance and manage your stats",
       image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
-      tags: ["TypeScript", "OpenAI", "PostgreSQL", "Docker"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/samxiao0/ai-task-manager",
+      tags: ["TypeScript", "React", "local_storage", "oofline"],
+      liveUrl: "https://bunkmaar.tech",
+      githubUrl: "https://github.com/samxiao0/bunkmaar",
     },
     {
       title: "Weather Dashboard",
