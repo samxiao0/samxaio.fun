@@ -206,13 +206,23 @@ export default function Resume() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <span className="font-medium">English</span>
-                  <br></br>
+                  <br />
                   <span className="text-muted-foreground ml-2">• Native</span>
                 </div>
                 <div>
-                  <span className="font-medium">Mandarin Chinese</span>
-                  <br></br>
+                  <span className="font-medium">Hindi</span>
+                  <br />
                   <span className="text-muted-foreground ml-2">• Fluent</span>
+                </div>
+                <div>
+                  <span className="font-medium">Telugu</span>
+                  <br />
+                  <span className="text-muted-foreground ml-2">• Native</span>
+                </div>
+                <div>
+                  <span className="font-medium">Urdu</span>
+                  <br />
+                  <span className="text-muted-foreground ml-2">• Conversational</span>
                 </div>
               </div>
             </CardContent>
