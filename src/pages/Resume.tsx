@@ -91,49 +91,7 @@ export default function Resume() {
             </CardContent>
           </Card>
 
-          {/* Experience */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Experience</CardTitle>
-            </CardHeader>
-            {/* <CardContent>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-semibold text-lg">Software Engineering Intern</h3>
-                  <p className="text-primary font-medium">Tech Company Name</p>
-                  <p className="text-muted-foreground">June 2024 - August 2024</p>
-                  <ul className="list-disc list-inside mt-2 text-sm text-muted-foreground space-y-1">
-                    <li>Developed and maintained web applications using React and TypeScript</li>
-                    <li>Implemented machine learning models for data analysis and prediction</li>
-                    <li>Collaborated with cross-functional teams in agile development environment</li>
-                    <li>Optimized application performance and improved user experience</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg">Research Assistant</h3>
-                  <p className="text-primary font-medium">University AI Lab</p>
-                  <p className="text-muted-foreground">January 2024 - Present</p>
-                  <ul className="list-disc list-inside mt-2 text-sm text-muted-foreground space-y-1">
-                    <li>Conducted research on computer vision algorithms for autonomous systems</li>
-                    <li>Developed Python scripts for data preprocessing and model training</li>
-                    <li>Published findings in university research journal</li>
-                    <li>Mentored junior students in machine learning concepts</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg">Freelance Developer</h3>
-                  <p className="text-primary font-medium">Self-Employed</p>
-                  <p className="text-muted-foreground">2023 - Present</p>
-                  <ul className="list-disc list-inside mt-2 text-sm text-muted-foreground space-y-1">
-                    <li>Built custom web applications for small businesses using modern technologies</li>
-                    <li>Developed responsive websites with React, Next.js, and Tailwind CSS</li>
-                    <li>Implemented e-commerce solutions with payment integration</li>
-                    <li>Maintained 99% client satisfaction rate through effective communication</li>
-                  </ul>
-                </div>
-              </div>
-            </CardContent> */}
-          </Card>  
+         
 
           {/* Projects */}
           <Card>
@@ -179,22 +137,22 @@ export default function Resume() {
             <CardHeader>
               <CardTitle>Certifications</CardTitle>
             </CardHeader>
-            {/* <CardContent>
-              <div className="space-y-3">
+            <CardContent>
+              <div className="space-y-3 text-sm text-muted-foreground">
                 <div>
-                  <h4 className="font-medium">AWS Certified Cloud Practitioner</h4>
-                  <p className="text-sm text-muted-foreground">Amazon Web Services • 2024</p>
+                  <h4 className="font-medium">Prompt Engineering for AI</h4>
+                  <p className="text-sm text-muted-foreground">edX • 2024</p>
                 </div>
                 <div>
-                  <h4 className="font-medium">Google Data Analytics Professional Certificate</h4>
-                  <p className="text-sm text-muted-foreground">Google • 2023</p>
+                  <h4 className="font-medium">SAMSLESHANA 2024</h4>
+                  <p className="text-sm text-muted-foreground">National Level Technical Symposium Certificate</p>
                 </div>
                 <div>
-                  <h4 className="font-medium">Deep Learning Specialization</h4>
-                  <p className="text-sm text-muted-foreground">Coursera • 2023</p>
+                  <h4 className="font-medium">Smart India Hackathon</h4>
+                  <p className="text-sm text-muted-foreground">Participant • 2024</p>
                 </div>
               </div>
-            </CardContent> */}
+            </CardContent>
           </Card>
 
           {/* Languages */}
@@ -207,12 +165,12 @@ export default function Resume() {
                 <div>
                   <span className="font-medium">English</span>
                   <br />
-                  <span className="text-muted-foreground ml-2">• Native</span>
+                  <span className="text-muted-foreground ml-2">• Fluent</span>
                 </div>
                 <div>
                   <span className="font-medium">Hindi</span>
                   <br />
-                  <span className="text-muted-foreground ml-2">• Fluent</span>
+                  <span className="text-muted-foreground ml-2">• Conversational</span>
                 </div>
                 <div>
                   <span className="font-medium">Telugu</span>
@@ -222,7 +180,7 @@ export default function Resume() {
                 <div>
                   <span className="font-medium">Urdu</span>
                   <br />
-                  <span className="text-muted-foreground ml-2">• Conversational</span>
+                  <span className="text-muted-foreground ml-2">• Native</span>
                 </div>
               </div>
             </CardContent>
