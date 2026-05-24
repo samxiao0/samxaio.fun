@@ -30,7 +30,7 @@ const GITHUB_USERNAME = "samxiao0"; // update if needed
     {
       title: "Student Attendance Manager",
       description: "This application lets you enter your attendance and manage your stats",
-      image: "/pulic/",
+      image: "/public/Screenshot 2026-05-24 141528.png",
       tags: ["TypeScript", "React", "local_storage", "ofline"],
       liveUrl: "https://bunkmaar.tech",
       githubUrl: "https://github.com/samxiao0/bunkmaar",
@@ -38,7 +38,7 @@ const GITHUB_USERNAME = "samxiao0"; // update if needed
     {
       title: "Portfolio Website",
       description: "Modern portfolio website with dark mode, animations, and responsive design.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+      image: "/public/Screenshot 2026-05-24 141240.png",
       tags: ["React", "Vite", "Tailwind", "TypeScript"],
       liveUrl: "https://samxiao.fun",
       githubUrl: "https://github.com/samxiao0/samxaio.fun",
@@ -46,7 +46,7 @@ const GITHUB_USERNAME = "samxiao0"; // update if needed
     {
       title: "ResumeRip",
       description: "Upload your resume and receive AI 'roasts' from multiple perspectives tailored for Indian job markets.",
-      image: "https://images.unsplash.com/photo-1520975911526-1d7b9f0a8b07?w=800&q=80",
+      image: "/public/resumerip.png",
       tags: ["AI", "Resume", "React", "Vercel"],
       liveUrl: "https://resumereip.vercel.app",
       githubUrl: "https://github.com/ThinkBotz/resumerip",
