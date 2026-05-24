@@ -23,24 +23,17 @@ const GITHUB_USERNAME = "samxiao0"; // update if needed
   const DESIRED_REPOS: string[] = [
 
   ];
+    
 
   // Featured projects data
   const projects = [
     {
       title: "Student Attendance Manager",
       description: "This application lets you enter your attendance and manage your stats",
-      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
+      image: "/pulic/",
       tags: ["TypeScript", "React", "local_storage", "ofline"],
       liveUrl: "https://bunkmaar.tech",
       githubUrl: "https://github.com/samxiao0/bunkmaar",
-    },
-    {
-      title: "Weather Dashboard",
-      description: "Real-time weather visualization with interactive maps, forecasts, and historical data analysis.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80",
-      tags: ["React", "D3.js", "API", "Tailwind"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/samxiao0/weather-dashboard",
     },
     {
       title: "Portfolio Website",
@@ -49,6 +42,14 @@ const GITHUB_USERNAME = "samxiao0"; // update if needed
       tags: ["React", "Vite", "Tailwind", "TypeScript"],
       liveUrl: "https://samxiao.fun",
       githubUrl: "https://github.com/samxiao0/samxaio.fun",
+    },
+    {
+      title: "ResumeRip",
+      description: "Upload your resume and receive AI 'roasts' from multiple perspectives tailored for Indian job markets.",
+      image: "https://images.unsplash.com/photo-1520975911526-1d7b9f0a8b07?w=800&q=80",
+      tags: ["AI", "Resume", "React", "Vercel"],
+      liveUrl: "https://resumereip.vercel.app",
+      githubUrl: "https://github.com/ThinkBotz/resumerip",
     },
   ];
 
