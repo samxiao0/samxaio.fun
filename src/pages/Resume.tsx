@@ -8,21 +8,22 @@ export default function Resume() {
       <Nav />
       <main id="main-content" className="max-w-4xl mx-auto px-6 pt-32 pb-20">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-2">Sam Xiao</h1>
-          <p className="text-xl text-muted-foreground mb-4">CSE(AI&ML) Student | AI & ML Enthusiast</p>
-          <div className="flex flex-wrap gap-4 text-sm text-muted-foreground items-center">
-            <span>📧 syedsame2244@gmail.com</span>
-            <span>📱 +91 9951970441</span>
-            <a href="https://www.samxiao.fun/"><span aria-brailleroledescription="website">🌐 samxiao.fun</span></a>
-            <span>📍 KADAPA, AP</span>
-            <a
-              href="/resume.pdf"
-              download="Samxiao_Resume.pdf"
-              className="inline-flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors font-medium"
-            >
-              📄 Download Resume
-            </a>
+          <h1 className="text-4xl font-bold mb-2">SYED MOHAMMAD SAMEER</h1>
+          <p className="text-sm text-muted-foreground mb-2">Kadapa, Andhra Pradesh, India – 516001</p>
+          <div className="flex flex-wrap gap-4 text-sm text-muted-foreground items-center mb-3">
+            <span>📧 <a className="text-primary hover:underline" href="mailto:syedsame2244@gmail.com">syedsame2244@gmail.com</a></span>
+            <span>📞 +91 9951970441</span>
+            <span>🔗 <a className="text-primary hover:underline" href="https://github.com/samxiao0">github.com/samxiao0</a></span>
+            <span>🔗 <a className="text-primary hover:underline" href="https://www.linkedin.com/in/samxiao0">linkedin.com/in/samxiao0</a></span>
+            <span>🌐 <a className="text-primary hover:underline" href="https://samxiao.me">samxiao.me</a></span>
           </div>
+          <a
+            href="/resume.pdf"
+            download="SYED_MOHAMMAD_SAMEER_Resume.pdf"
+            className="inline-flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors font-medium"
+          >
+            📄 Download Resume
+          </a>
         </div>
 
         <div className="grid gap-6">
@@ -33,9 +34,7 @@ export default function Resume() {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                Passionate computer science student specializing in Artificial Intelligence and Machine Learning.
-                Experienced in full-stack development with modern web technologies. Strong foundation in data analysis,
-                algorithm design, and software engineering principles. Eager to apply technical skills to solve real-world problems.
+                AI & ML undergraduate with hands-on experience in developing full-stack web applications and AI-powered systems using Python, React, Firebase, and Computer Vision technologies. Built and deployed practical solutions including attendance automation systems, civic issue reporting platforms, and AI-powered detection applications. Strong interest in software engineering, real-time systems, and scalable application development.
               </p>
             </CardContent>
           </Card>
@@ -79,48 +78,17 @@ export default function Resume() {
           {/* Skills */}
           <Card>
             <CardHeader>
-              <CardTitle>Technical Skills</CardTitle>
+              <CardTitle>Technical Highlights</CardTitle>
             </CardHeader>
-            {/* <CardContent>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-medium mb-2">Programming Languages</h4>
-                  <div className="flex flex-wrap gap-2">
-                     <Badge variant="secondary">Python</Badge>
-                    <Badge variant="secondary">JavaScript</Badge>
-                    <Badge variant="secondary">TypeScript</Badge>
-                    <Badge variant="secondary">Java</Badge>
-                    <Badge variant="secondary">C++</Badge>
-                    <Badge variant="secondary">SQL</Badge> 
-                  </div>
-                </div>
-                <div>
-                  <h4 className="font-medium mb-2">Frameworks & Libraries</h4>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="secondary">React</Badge>
-                    <Badge variant="secondary">Node.js</Badge>
-                    <Badge variant="secondary">Express.js</Badge>
-                    <Badge variant="secondary">TensorFlow</Badge>
-                    <Badge variant="secondary">PyTorch</Badge>
-                    <Badge variant="secondary">Scikit-learn</Badge>
-                    <Badge variant="secondary">Pandas</Badge>
-                    <Badge variant="secondary">NumPy</Badge> 
-                  </div>
-                </div>
-                <div>
-                  <h4 className="font-medium mb-2">Tools & Technologies</h4>
-                  <div className="flex flex-wrap gap-2">
-                     <Badge variant="secondary">Git</Badge>
-                    <Badge variant="secondary">Docker</Badge>
-                    <Badge variant="secondary">AWS</Badge>
-                    <Badge variant="secondary">MongoDB</Badge>
-                    <Badge variant="secondary">PostgreSQL</Badge>
-                    <Badge variant="secondary">Linux</Badge>
-                    <Badge variant="secondary">VS Code</Badge> 
-                  </div>
-                </div>
-              </div>
-            </CardContent> */}
+            <CardContent>
+              <ul className="list-disc list-inside text-sm text-muted-foreground space-y-2">
+                <li>Developed and deployed multiple full-stack web applications using React, TypeScript, Firebase, and Supabase.</li>
+                <li>Experience building AI-powered systems using Computer Vision, YOLOv7, and real-time image analysis workflows.</li>
+                <li>Built geolocation-enabled and realtime-enabled systems with modern web technologies and cloud services.</li>
+                <li>Led technical events and student coordination activities as President of ThinkBotz.</li>
+                <li>Experimented with LLaMA-based conversational AI assistant customization and AI automation workflows.</li>
+              </ul>
+            </CardContent>
           </Card>
 
           {/* Experience */}
@@ -172,49 +140,38 @@ export default function Resume() {
             <CardHeader>
               <CardTitle>Key Projects</CardTitle>
             </CardHeader>
-            {/* <CardContent>
-              <div className="space-y-4">
+            <CardContent>
+              <div className="space-y-4 text-sm text-muted-foreground">
                 <div>
-                  <h3 className="font-semibold">AI-Powered Chatbot</h3>
-                  <p className="text-sm text-muted-foreground mb-2">
-                    Developed an intelligent chatbot using NLP techniques and transformer models.
-                    Features include sentiment analysis, intent recognition, and multi-language support.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline">Python</Badge>
-                    <Badge variant="outline">TensorFlow</Badge>
-                    <Badge variant="outline">Flask</Badge>
-                  </div>
+                  <h4 className="font-semibold">BunkMaar – Student Attendance Management System</h4>
+                  <p className="mt-1">Tech Stack: React, TypeScript, Vite, Tailwind CSS, Zustand, Firebase, Recharts, PWA</p>
+                  <ul className="list-disc list-inside mt-2">
+                    <li>Developed a PWA-ready student attendance platform using React, TypeScript, Zustand, and Firebase for real-time attendance management.</li>
+                    <li>Implemented timetable, calendar, subject analytics, and attendance prediction features to estimate required attendance percentages.</li>
+                    <li>Designed responsive mobile-first interfaces with dark/light themes and offline-capable PWA functionality.</li>
+                  </ul>
                 </div>
+
                 <div>
-                  <h3 className="font-semibold">Personal Portfolio Website</h3>
-                  <p className="text-sm text-muted-foreground mb-2">
-                    Built a responsive portfolio website showcasing projects and skills.
-                    Implemented dark/light theme toggle and smooth animations.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline">React</Badge>
-                    <Badge variant="outline">TypeScript</Badge>
-                    <Badge variant="outline">Tailwind CSS</Badge>
-                  </div>
+                  <h4 className="font-semibold">Civic Eye – AI Civic Issue Reporting Platform (Ongoing)</h4>
+                  <p className="mt-1">Tech Stack: React, TypeScript, Supabase, Deno, Tailwind CSS, React-Leaflet, AI/ML</p>
+                  <ul className="list-disc list-inside mt-2">
+                    <li>Built a full-stack civic issue reporting platform using React, TypeScript, Supabase, and Deno serverless functions for real-time issue management.</li>
+                    <li>Implemented live camera-based location capture with EXIF GPS extraction and reverse geolocation for accurate automatic area tagging.</li>
+                    <li>Developed AI-powered image analysis workflows to classify issue type, department, and priority using structured AI responses.</li>
+                  </ul>
                 </div>
+
                 <div>
-                  <h3 className="font-semibold">Data Visualization Dashboard</h3>
-                  <p className="text-sm text-muted-foreground mb-2">
-                    Created an interactive dashboard for analyzing sales data with real-time updates.
-                    Integrated multiple data sources and implemented advanced filtering capabilities.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline">Python</Badge>
-                    <Badge variant="outline">Pandas</Badge>
-                    <Badge variant="outline">Plotly</Badge>
-                  </div>
+                  <h4 className="font-semibold">Group Photo Attendance System (Ongoing)</h4>
+                  <p className="mt-1">Tech Stack: Python, Computer Vision, AI/ML</p>
+                  <ul className="list-disc list-inside mt-2">
+                    <li>Building a two-stage pipeline using face detection and face recognition models for automated attendance systems.</li>
+                    <li>Researching optimization strategies for multi-face recognition and automated attendance processing.</li>
+                  </ul>
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground mt-4">
-                For more detailed project information, visit the <a href="/projects" className="text-primary hover:underline">Projects</a> page.
-              </p>
-            </CardContent> */}
+            </CardContent>
           </Card>
 
           {/* Certifications */}
