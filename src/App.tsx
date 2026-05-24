@@ -13,7 +13,6 @@ import NotFound from "./pages/NotFound";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import BackgroundMusic from "@/components/BackgroundMusic";
-import FloatingMascot from "@/components/FloatingMascot";
 
 const queryClient = new QueryClient();
 
@@ -43,7 +42,6 @@ const App = () => (
             </div>
           </BrowserRouter>
           <Footer />
-          <FloatingMascot />
         </div>
       </TooltipProvider>
     </ThemeProvider>
