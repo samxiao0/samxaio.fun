@@ -8,7 +8,7 @@ export default function About() {
         <h1 className="text-3xl font-bold mb-6">About</h1>
         <div className="prose prose-invert max-w-none">
           <p className="text-xl leading-relaxed mb-6 font-medium">
-            Hey! I'm Sam Xiao, a computer science student who's obsessed with AI and building practical apps. Currently in my third year of B.Tech CSE (AI & ML) at Annamacharya Institute of Technology & Sciences, maintaining an 8.34 CGPA.
+            Hey! I'm Sam Xiao, a computer science student who's obsessed with AI and building practical apps. Currently in my Final year of B.Tech CSE (AI & ML) at Annamacharya Institute of Technology & Sciences, maintaining an 8.34 CGPA.
           </p>
 
           <p className="mb-6">
