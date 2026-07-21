@@ -138,7 +138,7 @@ const Index = () => {
             <p className="text-base">Welcome 👋</p>
             
             <p className="text-base leading-relaxed text-foreground/80">
-I’m SAMXIAO, a passionate 3rd-year B.Tech CSE (AI & ML) student driven by curiosity and innovation. I love building things that blend logic with creativity — from intelligent software to sleek, functional designs. With a mindset rooted in questioning everything and learning constantly, I strive to master the art of programming and artificial intelligence. Whether it’s coding, designing, or exploring new tech trends, I’m all about turning ideas into impact. My journey is just beginning, but every line of code I write brings me closer to shaping the future I envision.
+I’m SAMXIAO, a passionate 4th - year B.Tech CSE (AI & ML) student driven by curiosity and innovation. I love building things that blend logic with creativity — from intelligent software to sleek, functional designs. With a mindset rooted in questioning everything and learning constantly, I strive to master the art of programming and artificial intelligence. Whether it’s coding, designing, or exploring new tech trends, I’m all about turning ideas into impact. My journey is just beginning, but every line of code I write brings me closer to shaping the future I envision.
 
             </p>
 
